@@ -17,7 +17,7 @@ body {
 
 /* === CONTAINER PRINCIPAL === */
 div#root {
-  background: #fff;
+  background: #fff; /* ✅ Fond blanc conservé */
   color: #251560;
   flex: 1;
   margin: auto;
@@ -62,7 +62,7 @@ div.add-todo {
 
 div.add-todo input[type="text"] {
   font-size: 1em;
-  padding: 1rem 3rem 1rem 1rem;
+  padding: 18px 51px 18px 20px; /* ✅ Padding vertical conservé */
   background: #edeef0;
   width: 100%;
   border-radius: 30px;
@@ -75,7 +75,7 @@ div.add-todo input[type="button"] {
   right: 5px;
   top: 5px;
   bottom: 5px;
-  padding: 0 1.5rem;
+  padding: 18px 40px; /* ✅ Padding vertical corrigé */
   background: #ff5745;
   color: white;
   font-weight: bold;
@@ -106,13 +106,13 @@ select {
   justify-content: space-between;
   align-items: center;
   margin: 0.75rem 0;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-wrap: nowrap; /* ✅ Empêche le retour à la ligne du bouton */
 }
 
 div.tache {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .todo .text-todo {
@@ -121,6 +121,7 @@ div.tache {
   font-size: 1em;
   border: none;
   outline: none;
+  background: none; /* ✅ Suppression du fond */
 }
 
 .change {
@@ -152,9 +153,22 @@ input[type="text"].true {
   }
 
   div.add-todo input[type="button"] {
-    position: static;
-    margin-top: 0.5rem;
-    width: 100%;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    padding: 18px 40px; /* ✅ Padding vertical maintenu */
+    width: auto;
+  }
+
+  .todo {
+    flex-direction: row; /* ✅ Empêche le retour à la ligne */
+    align-items: center;
+  }
+
+  .change {
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
 
@@ -166,12 +180,13 @@ input[type="text"].true {
   }
 
   .todo {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
   .change {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   }
