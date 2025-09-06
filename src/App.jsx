@@ -6,7 +6,11 @@ import './App.css'
 
 function App() {
 
-  const [TODO, setTodo] = useState(JSON.parse(localStorage.getItem("todos")))
+  const liste = JSON.parse(localStorage.getItem("todos"))
+  if (!liste) {
+    localStorage.setItem("todos", JSON.stringify([]))
+  }
+  const [TODO, setTodo] = useState(liste)
 
   const [search, setSearch] = useState("")
 
