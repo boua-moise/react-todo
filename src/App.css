@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: #251560;
+  display: flex;
+  flex-direction: column;
+}
+
+div#root{
+  padding: 80px;
+  color: #251560;
+  background: #fff;
+  flex: 1;
+  margin: auto;
+  width: 40%;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+header h1{
+  font-size: 1.5em;
+}
+
+header span{
+  display: flex;
+  align-items: center;
+}
+
+div.ajout-filtre{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+div.add-todo input[type="text"]{
+  font-size: 1em;
+  position: absolute;  
+  padding: 18px 51px 18px 20px;
+  background: #edeef0; 
+  width: 300PX;  
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+div.add-todo input[type="button"]{
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  position: relative; 
+  background: #ff5745; 
+  z-index: 3;  
+  padding: 18px 40px;  
+  border-radius: 30px;
+  border: none;
+  left: 275px;
+}
+
+select{
+  color: #525151;
+  color: #251560;
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid;
+  font-size: 1em;
+  padding: 5px 15px;
+}
+
+
+.todolist{
+  margin-top: 30px;
+}
+
+.todo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+div.tache{
+  display: flex;
+}
+
+.todo .text-todo{
+  margin-left: 30px;
+  color: #251560;
+  font-size: 1em;
+  border: none;
+  outline: none;
+}
+
+.change{
+  display: flex;
+}
+
+input[type="text"].true{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
