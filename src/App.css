@@ -25,7 +25,7 @@ div#root {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 /* === HEADER === */
@@ -51,20 +51,20 @@ div.ajout-filtre {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
+  align-items: center;
   margin: 1rem 0;
 }
 
 /* === FORMULAIRE TODO === */
 div.add-todo {
   position: relative;
-  width: 100%;
 }
 
 div.add-todo input[type="text"] {
   font-size: 1em;
+  width: 400px;
   padding: 18px 51px 18px 20px; /* ✅ Padding vertical conservé */
   background: #edeef0;
-  width: 100%;
   border-radius: 30px;
   border: none;
   outline: none;
@@ -72,9 +72,7 @@ div.add-todo input[type="text"] {
 
 div.add-todo input[type="button"] {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  bottom: 5px;
+  right: -3px;
   padding: 18px 40px; /* ✅ Padding vertical corrigé */
   background: #ff5745;
   color: white;
@@ -154,10 +152,12 @@ input[type="text"].true {
 
   div.add-todo input[type="button"] {
     position: absolute;
-    right: 5px;
-    top: 5px;
-    bottom: 5px;
+    right: 20px;
     padding: 18px 40px; /* ✅ Padding vertical maintenu */
+    width: auto;
+  }
+
+  div.add-todo input[type="text"] {
     width: auto;
   }
 
