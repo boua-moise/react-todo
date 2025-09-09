@@ -175,7 +175,7 @@ input[type="text"].true {
 @media (max-width: 480px) {
   div#root {
     padding: 1rem;
-    border-radius: 0;
+    border-radius: 12px;
     box-shadow: none;
   }
 
